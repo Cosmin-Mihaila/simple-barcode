@@ -3,6 +3,25 @@
     "version": ">= 7.3.0"
   },
   "build": {
+    "base": {
+      "node": "12.13.0",
+      "yarn": "1.22.5",
+      "env": {
+        "EXAMPLE_ENV": "example value"
+      },
+      "android": {
+        "image": "default",
+        "env": {
+          "PLATFORM": "android"
+        }
+      },
+      "ios": {
+        "image": "latest",
+        "env": {
+          "PLATFORM": "ios"
+        }
+      }
+    },
     "development": {
       "developmentClient": true,
       "distribution": "internal"
